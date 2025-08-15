@@ -6,16 +6,17 @@ Esta API faz parte de um projeto pessoal sobre um site de receitas, desenvolvida
 
 ## 📂 Sumário
 
-- ⚒️ Tecnologias utilizada
-- 🔧 Funcionalidades
-- 🗄️ Database Modeling
-- 🗃️ Configuração da Conexão
-- 🔍 Fazendo Requisições:
-  * 🍪 Ingrediente
-  * 📔 Receita
-- 🚀 Como Executar o Projeto
-  - 📗 Documentação Swagger
-  - 🚫 Observações
+* [⚒️ Tecnologias utilizada](#️-tecnologias-utilizada)
+* [🔧 Funcionalidades](#-funcionalidades)
+* [🗄️ Database Modeling](#️-database-modeling)
+* [🗃️ Configuração da Conexão](#️-configuração-da-conexão)
+* 🔍 Fazendo Requisições
+  * [🍪 Ingrediente](#-gerenciamento-do-ingrediente)
+  * [📔 Receita](#-gerenciamento-de-receitas)
+* [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
+  * [📗 Documentação Swagger](#-documentação-swagger)
+  * [🚫 Observações](#-observações)
+
   
 ---
 
