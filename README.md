@@ -195,7 +195,7 @@ A API conta com documentação interativa via **Swagger UI**, facilitando testes
 🟢 **Swagger UI:** [http://localhost:5068/swagger/index.html](http://localhost:5068/swagger/index.html)
 
 📌 **Exemplo da interface Swagger UI:**
-<img src="img/Swagger-img.png">
+<img src="imgs/swagger-site-de-receita-api.png">
 
 ---
 
