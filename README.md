@@ -6,7 +6,7 @@ Esta API faz parte de um projeto pessoal sobre um site de receitas, desenvolvida
 
 ## 📂 Sumário
 
-* [⚒️ Tecnologias utilizadas](⚒️-Tecnologias-utilizadas)
+* [⚒️ Tecnologias utilizadas](#️-Tecnologias-utilizadas)
 * [🔧 Funcionalidades](#-funcionalidades)
 * [🗄️ Database Modeling](#️-database-modeling)
 * [🗃️ Configuração da Conexão](#️-configuração-da-conexão)
