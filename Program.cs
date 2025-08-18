@@ -17,9 +17,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
@@ -29,7 +28,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+var applyMigrations = builder.Configuration["APPLY_MIGRATIONS"];
 
+if (!string.IsNullOrEmpty(applyMigrations) && applyMigrations.ToLower() == "true")
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        db.Database.Migrate();
+    }
+}
 
 app.UseCors("AllowAngularApp");
 app.UseAuthorization();
@@ -37,8 +45,4 @@ app.UseAuthorization();
 app.UseHttpsRedirection();
 app.MapControllers();
 
-
-
 app.Run();
-
-

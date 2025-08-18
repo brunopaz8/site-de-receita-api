@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: site-de-receitas-db
+    environment:
+      POSTGRES_DB: SiteDeReceita
+      POSTGRES_USER: chefe
+      POSTGRES_PASSWORD: cookie
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: site-de-receitas-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:5068
+      ASPNETCORE_HTTP_PORTS: 5068
+      ConnectionStrings__DefaultConnection: >
+        Host=db;Port=5432;Database=SiteDeReceita;Username=chefe;Password=cookie
+      APPLY_MIGRATIONS: "true"
+    ports:
+      - "5068:5068"
+
+
+volumes:
+  pgdata:
