@@ -6,17 +6,18 @@ Esta API faz parte de um projeto pessoal sobre um site de receitas, desenvolvida
 
 ## 📂 Sumário
 
-* [⚒️ Tecnologias utilizadas](#️-Tecnologias-utilizadas)
-* [🔧 Funcionalidades](#-funcionalidades)
-* [🗄️ Database Modeling](#️-database-modeling)
-* [🗃️ Configuração da Conexão](#️-configuração-da-conexão)
-* 🔍 Fazendo Requisições
+- [⚒️ Tecnologias utilizadas](#️-Tecnologias-utilizadas)
+- [🔧 Funcionalidades](#-funcionalidades)
+- [🗄️ Database Modeling](#️-database-modeling)
+- [🗃️ Configuração da Conexão](#️-configuração-da-conexão)
+- 🔍 Fazendo Requisições
   * [🍪 Ingrediente](#-gerenciamento-do-ingrediente)
   * [📔 Receita](#-gerenciamento-de-receitas)
-* [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
-  * [📗 Documentação Swagger](#-documentação-swagger)
+- [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
+  * [💻 Rodando localmente](#-rodando-localmente)
   * [🐳 Rodando com Docker](#-rodando-com-docker)
-  * [🚫 Observações](#-observações)
+- [📗 Documentação Swagger](#-documentação-swagger)
+- [🚫 Observações](#-observações)
 
 ---
 
@@ -251,7 +252,7 @@ docker compose down -v
 
 ---
 
-### 📗 Documentação **Swagger**
+## 📗 Documentação **Swagger**
 A API conta com documentação interativa via **Swagger UI**, facilitando testes e visualização dos endpoints. Após iniciar a aplicação, acesse:
 
 🟢 **Swagger UI:** [http://localhost:5068/swagger/index.html](http://localhost:5068/swagger/index.html)
@@ -261,7 +262,7 @@ A API conta com documentação interativa via **Swagger UI**, facilitando testes
 
 ---
 
-### 🚫 Observações
+## 🚫 Observações
 
 * Configure corretamente a `connectionString` no `appsettings.json` caso não for usar o docker.
 * Execute migrations manualmente ao rodar localmente (`dotnet ef database update`).
