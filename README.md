@@ -26,7 +26,6 @@ Esta API faz parte de um projeto pessoal sobre um site de receitas, desenvolvida
 * .NET 8
 * ASP.NET Core
 * Entity Framework Core
-
   * Tools
   * Design
   * Npgsql
@@ -40,14 +39,13 @@ Esta API faz parte de um projeto pessoal sobre um site de receitas, desenvolvida
 ## 🔧 Funcionalidades
 
 * **Ingrediente**
-
   * **Cria** um novo ingrediente
   * **Busca** todos os ingredientes
   * **Busca** os ingredientes pelo nome
   * **Atualiza** um ingrediente existente
   * **Deleta** um ingrediente
+    
 * **Receitas**
-
   * **Cria** uma nova receita
   * **Busca** todas as receitas
   * **Busca** a receita pelo id
